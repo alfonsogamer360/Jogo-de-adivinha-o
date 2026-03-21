@@ -1,0 +1,11 @@
+.titulo {
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 100px
+}
+.imageForca {
+    width: 300px;
+    height: auto;
+}
