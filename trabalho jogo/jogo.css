@@ -1,11 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(3, 3, 3);
+    background: radial-gradient(rgb(122,43,67));
+    text-align: center;
+}
 .titulo {
-    font-size: 100px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    font-size: 50px;
     margin-bottom: 100px
 }
+.container {
+    margin-top: 100px;
+}
 .imageForca {
-    width: 300px;
+    width: 100px;
     height: auto;
 }
