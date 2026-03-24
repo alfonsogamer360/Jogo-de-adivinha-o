@@ -6,10 +6,7 @@ let img4 = document.querySelector('img4');
 let img5 = document.querySelector('img5');
 let img6 = document.querySelector('img6');
 
-botao.addEventListener('click', ()=>{
-
-});
-const input = document.querySelector("#input-letra");
+let input = document.querySelector("#input-letra");
 
 input.addEventListener("input", function() {
   this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');
@@ -56,7 +53,7 @@ palavraOculta = palavras[Math.floor(Math.random() * palavras.length)];
 console.log(palavraOculta)
 
 botao.addEventListener('click', () => {
-   if (palavraOculta.includes(input)) {
+   if (palavraOculta.includes(input.value)) {
     console.log("a");
    } else {
     console.log("b");  
