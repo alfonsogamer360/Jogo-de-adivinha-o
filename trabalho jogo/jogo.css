@@ -10,10 +10,6 @@ body {
 .container {
     margin-top: 100px;
 }
-.imageForca {
-    width: 100px;
-    height: auto;
-}
 .img1{
     width: 200px;
     height: 200px;
@@ -51,6 +47,6 @@ body {
 }
 p{
 border: 2px solid black;
-margin-left: 900px;
-margin-right: 900px;
+margin-left: 45%;
+margin-right: 45%;
 }

@@ -6,10 +6,14 @@ let img4 = document.querySelector('img4');
 let img5 = document.querySelector('img5');
 let img6 = document.querySelector('img6');
 
-let input = document.querySelector("#input-letra");
+let nomePalavra = document.getElementById('nomeJogo');
+let input = document.getElementById('input-letra');
+let erradas = document.getElementById('erradas');
+let erros = 0;
+const maxErros = 5
 
-input.addEventListener("input", function() {
-  this.value = this.value.replace(/[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]/g, '');
+input.addEventListener("input", function () {
+    input.value = input.value.replace(/[^a-zA-Z0-9 ]/g, '');
 });
 
 
@@ -50,12 +54,75 @@ let palavras = ["tecnologia", "inovação", "desenvolvimento", "código", "javas
 ];
 
 palavraOculta = palavras[Math.floor(Math.random() * palavras.length)];
-console.log(palavraOculta)
+let letrasEscritas = [];
+console.log(palavraOculta);
 
-botao.addEventListener('click', () => {
-   if (palavraOculta.includes(input.value)) {
-    console.log("a");
-   } else {
-    console.log("b");  
-   }
-});
+function esconderJogo(nome) {
+    nomePalavra.textContent = "";
+    for (let letra of nome) {
+        if (/[a-zA-ZÀ-ÿ]/.test(letra)) {
+            if (letrasEscritas.includes(letra)) {
+                nomePalavra.textContent += letra + " ";
+            } else {
+                nomePalavra.textContent += "_ ";
+            }
+        } else {
+            nomePalavra.textContent += letra + " ";
+        }
+    }
+    verificarLetrasErradas()
+}
+
+esconderJogo(palavraOculta);
+
+function verificarLetra() {
+    let letra = input.value.toLowerCase();
+    
+    if (letra && !letrasEscritas.includes(letra)) {
+        letrasEscritas.push(letra);
+        esconderJogo(palavraOculta);
+    }
+    
+    input.value = "";
+}
+
+function verificarLetrasErradas() {
+    if (!palavraOculta.includes(input)) {
+      erradas.textContent = letrasEscritas.filter(letra => !palavraOculta.includes(letra));
+      erros++
+    }
+}
+
+if (!palavraOculta.includes(input.value.toLowerCase())) {
+            erros++;
+            trocarImagem(erros);
+        }
+
+
+function trocarImagem(erros) {
+  switch (erros) {
+    case 1:  
+      img1.style.display = "none";
+      img2.style.display = "flex";    
+    break
+    case 2:
+      img2.style.display = "none";
+      img3.style.display = "flex";  
+    break
+    case 3:
+      img3.style.display = "none";
+      img4.style.display = "flex";
+    break
+    case 4:
+      img4.style.display = "none";
+      img5.style.display = "flex";
+    break;
+    case 5:
+      img5.style.display = "none";
+      img6.style.display = "flex";
+    break;
+    }
+}
+if(erros === maxErros) {
+  alert("Game Over! A palavra era: " + palavraOculta);
+}
