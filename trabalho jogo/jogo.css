@@ -5,40 +5,14 @@ body {
 }
 .titulo {
     font-size: 50px;
-    margin-bottom: 100px
+    margin-bottom: 100px;
 }
 .container {
     margin-top: 100px;
 }
-.img1{
-    width: 200px;
-    height: 200px;
-    display: flex;
-}
-.img2{
-    width: 200px;
-    height: 130px;
-    display: none;
-}
-.img3{
-    width: 200px;
-    height: 130px;
-    display: none;
-}
-.img4{
-    width: 200px;
-    height: 130px;
-    display: none;
-}
-.img5{
-    width: 200px;
-    height: 200px;
-    display: none;
-}
-.img6{
-    width: 200px;
-    height: 230px;
-    display: none;
+#imagem{
+    width: auto;
+    height: 100px;
 }
 .imagens{
     display: flex;

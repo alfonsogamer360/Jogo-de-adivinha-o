@@ -3,26 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advinhe a palavra</title>
+    <title>Advinhe a palavra oculta</title>
     <link rel="stylesheet" href="jogo.css">
 </head>
 <body>
     <div class="container">
     <h1 class="titulo">Adivinhe a palavra oculta</h1>
         <div class = "imagens">
-            <img class="img1" src="https://tse1.mm.bing.net/th/id/OIP.ejMB3rAx7Jappavn4XWqLQAAAA?pid=ImgDet&w=203&h=203&c=7&o=7&rm=3">
-            <img class="img2" src="https://media.istockphoto.com/id/1345310571/zh/%E5%90%91%E9%87%8F/phone-battery-mobile-battery-in-black-power-symbol-accumulator-level.jpg?s=170667a&w=0&k=20&c=vzHiwW8Z21Nuz_2wOHFbf0a0m_gjMoIrYbMkGzwl2jc=">
-            <img class="img3" src="https://tse4.mm.bing.net/th/id/OIP.RNIRT5SSX4mvxwWGO8tLWwHaE8?pid=ImgDet&w=203&h=135&c=7&o=7&rm=3">
-            <img class="img4" src="https://tse3.mm.bing.net/th/id/OIP.miTVkOp3Dh3oWrZxLSnvhAHaE8?pid=ImgDet&w=203&h=135&c=7&o=7&rm=3">
-            <img class="img5" src="https://media.istockphoto.com/id/1406390448/pt/vetorial/mobile-phone-battery-sign-icon.jpg?s=612x612&w=0&k=20&c=Ad0tk2zhhPht0Ho6PTuc2xH1obU_1ThNyLjZkXLRGBM=">
-            <img class="img6" src="https://media.istockphoto.com/id/1145168155/pt/vetorial/full-battery-icon-vector.jpg?s=612x612&w=0&k=20&c=Yi1-xRPHRW-432VEg8lxh_Czzl3dtHlgHkzS_VgX7xY=">
+            <img id="imagem" src="https://image2url.com/r2/default/images/1774460250120-8badc8cf-0b17-4560-b5f6-25e5f651d6c1.png">
         </div>
         <p>Insira a letra</p>
         <input type="text" id="input-letra" maxlength="1" placeholder="apenas letras"  oninput="this.value = this.value.replace(/[^a-zA-Z\u00C0-\u00FF ]/g, '')" style="text-transform: lowercase;">
-        <button id="botao" onclick="verificarLetra()">ADIVINHA</button>
+        <button id="botao" onclick="verificarLetra()" disabled >ADIVINHA</button>
         <h1 id="nomeJogo"></h1>
-        <h2 id="painel"></h2> 
-        <h2 id="numErros">Erros:</h2>
+        <h2>Erros:</h2>
         <h2 id="erradas"></h2>
     </div>
     
