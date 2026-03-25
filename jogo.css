@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(3, 3, 3);
+    text-align: center;
+}
+.titulo {
+    font-size: 50px;
+    margin-bottom: 100px;
+}
+.container {
+    margin-top: 100px;
+}
+#imagem{
+    width: auto;
+    height: 100px;
+}
+.imagens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+border: 2px solid black;
+margin-left: 45%;
+margin-right: 45%;
+}
