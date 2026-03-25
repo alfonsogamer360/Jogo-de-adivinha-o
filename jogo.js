@@ -50,6 +50,7 @@ const imagens = [// imagens para cada erro do jogo
     "https://image2url.com/r2/default/images/1774460531105-4f2b3f07-309c-40c5-a0e1-38442b774a33.png"  // 5 erros
 ];
 
+//https://alfonsogamer360.github.io/Jogo-de-adivinha-o/ 
 
 // função para permitir apenas letras no input
 input.addEventListener("input", function () {
