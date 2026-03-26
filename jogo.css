@@ -1,26 +1,63 @@
 body {
-    font-family: Arial, sans-serif;
-    color: rgb(3, 3, 3);
-    text-align: center;
+font-family: Arial, sans-serif;
+background: linear-gradient(to right, #f700ff, #ff0000);
+margin: 0;
 }
-.titulo {
-    font-size: 50px;
-    margin-bottom: 100px;
-}
+
 .container {
-    margin-top: 100px;
+width: 400px;
+margin: 60px auto;
+text-align: center;
+background-color: #c2b7b7;
+padding: 20px;
+border: 1px solid #000000;
 }
-#imagem{
-    width: auto;
-    height: 100px;
+
+h1 {
+font-size: 22px;
+color: #020202;
 }
-.imagens{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+h3 {
+font-size: 16px;
+color: #000000;
 }
-p{
-border: 2px solid black;
-margin-left: 45%;
-margin-right: 45%;
+
+input {
+width: 80%;
+padding: 8px;
+margin-top: 5px;
+margin-bottom: 10px;
+border: 1px solid #82c5ec;
+}
+
+button {
+padding: 8px 12px;
+border: 1px solid #000000;
+background-color: #ffffff;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #ffffff;
+}
+
+button:disabled {
+background-color: #ffffff;
+cursor: not-allowed;
+}
+
+#painel {
+margin-top: 10px;
+font-size: 18px;
+letter-spacing: 4px;
+}
+
+#erradas {
+background-color: rgb(218, 210, 210) ;
+
+border:#000000 solid 1px;
+color: black;
+padding: 5px;
+margin-top: 10px;
 }

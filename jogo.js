@@ -42,12 +42,12 @@ let palavras = ["tecnologia", "inovação", "desenvolvimento", "código", "javas
   'café', 'chá', 'suco', 'leite', 'pão', 'queijo', 'bolo', 'doce', 'salgado', 'fruta'
 ];
 const imagens = [// imagens para cada erro do jogo
-    "https://image2url.com/r2/default/images/1774460250120-8badc8cf-0b17-4560-b5f6-25e5f651d6c1.png", // 0 erros
-    "https://image2url.com/r2/default/images/1774460344224-afca1df9-110a-42a5-a613-b84136155fa8.png", // 1 erro
-    "https://image2url.com/r2/default/images/1774460417632-6fe260b2-c6d7-4481-b1d2-39fbe6b3808a.png", // 2 erros
-    "https://image2url.com/r2/default/images/1774460442745-93871b97-be54-422c-bd50-a207873d8a00.png", // 3 erros
-    "https://image2url.com/r2/default/images/1774460481624-5980d23a-20f6-4cbc-ab82-26e199979d48.png", // 4 erros
-    "https://image2url.com/r2/default/images/1774460531105-4f2b3f07-309c-40c5-a0e1-38442b774a33.png"  // 5 erros
+    "https://image2url.com/r2/default/images/1774548910976-18886b61-cf05-49db-a54b-39c4a73ba8dd.png", // 100%
+    "https://image2url.com/r2/default/images/1774549053393-21c111ab-0adc-48b7-bad7-dbb7d469835f.png", // 80%
+    "https://image2url.com/r2/default/images/1774549112433-0146004e-d957-4ba4-af0a-93fc150af1b5.png", // 60%
+    "https://image2url.com/r2/default/images/1774549179741-9d206f3d-5af4-4dcf-866f-d9fe07833132.png", // 40%
+    "https://image2url.com/r2/default/images/1774549227582-716b9a93-c5ce-4c9e-b5ed-da87a24c5e60.png", // 20%
+    "https://image2url.com/r2/default/images/1774548791088-a20dbd17-8da2-4aa3-97ea-e52c4ca2595a.png"  // 0%
 ];
 
 //https://alfonsogamer360.github.io/Jogo-de-adivinha-o/ 
@@ -82,6 +82,7 @@ function esconderJogo(palavra) {
 }
 esconderJogo(palavraOculta); // chama a função para mostrar a palavra oculta com os traços
 
+
 // função para verificar a letra escrita no input
 function verificarLetra() {
     let letra = input.value.toLowerCase();// forçar o input a ser letra minúscula para facilitar a comparação
@@ -101,7 +102,7 @@ function verificarLetra() {
     // verifica se o jogador ganhou (se a palavra oculta não tiver mais traços)
     if (!nomePalavra.textContent.includes("_")) {
       setTimeout(() => {// função vazia para criar um delay
-            alert("Você venceu a palavra oculta era: " + palavraOculta);//alerta o game over e mostra a palavra oculta completa
+            alert("Você venceu! A palavra oculta era: " + palavraOculta);//alerta o game over e mostra a palavra oculta completa
             location.reload(true);// recarrega a página para começar um novo jogo
             }, 2000);// coloca um delay de 2 segundos para o jogador ver a imagem final antes do alerta
     }
